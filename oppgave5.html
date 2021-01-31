@@ -35,33 +35,38 @@
 
 
     <script>
+        // hjelpefunksjon
+        function celle(id) {
+            return document.getElementById(id);
+        }
+
         function trykk(tagElement, alt1, alt2, alt3, alt4) {
 
-            if (document.getElementById(alt1).innerHTML == '') {
-                document.getElementById(alt1).innerHTML = tagElement.innerHTML;
+            if (celle(alt1).innerHTML == '') {
+                celle(alt1).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (document.getElementById(alt2).innerHTML == '') {
-                document.getElementById(alt2).innerHTML = tagElement.innerHTML;
+            if (celle(alt2).innerHTML == '') {
+                celle(alt2).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (alt3 != null && document.getElementById(alt3).innerHTML == '') {
-                document.getElementById(alt3).innerHTML = tagElement.innerHTML;
+            if (alt3 != null && celle(alt3).innerHTML == '') {
+                celle(alt3).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (alt4 != null && document.getElementById(alt4).innerHTML == '') {
-                document.getElementById(alt4).innerHTML = tagElement.innerHTML;
+            if (alt4 != null && celle(alt4).innerHTML == '') {
+                celle(alt4).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
 
-            if( document.getElementById("r1k1") == "1" 
-                && document.getElementById("r1k2") == "2"
-                && document.getElementById("r1k3") == "3"
-                && document.getElementById("r2k1") == "4"
-                && document.getElementById("r2k2") == "5"
-                && document.getElementById("r2k3") == "6"
-                && document.getElementById("r3k1") == "7"
-                && document.getElementById("r3k2") == "8") {
+            if( celle("r1k1") == "1" 
+                && celle("r1k2") == "2"
+                && celle("r1k3") == "3"
+                && celle("r2k1") == "4"
+                && celle("r2k2") == "5"
+                && celle("r2k3") == "6"
+                && celle("r3k1") == "7"
+                && celle("r3k2") == "8") {
                     alert("Gratulerer! Du vant")
                 }
         }
