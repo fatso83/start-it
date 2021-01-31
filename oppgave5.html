@@ -35,26 +35,29 @@
 
 
     <script>
-        // hjelpefunksjon
         function celle(id) {
             return document.getElementById(id);
         }
 
+        function celleErTom(id) {
+            return celle(id).innerHTML == '';
+        }
+
         function trykk(tagElement, alt1, alt2, alt3, alt4) {
 
-            if (celle(alt1).innerHTML == '') {
+            if (celleErTom((alt1))) {
                 celle(alt1).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (celle(alt2).innerHTML == '') {
+            if (celleErTom((alt2))) {
                 celle(alt2).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (alt3 != null && celle(alt3).innerHTML == '') {
+            if (alt3 != null && celleErTom((alt3))) {
                 celle(alt3).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            if (alt4 != null && celle(alt4).innerHTML == '') {
+            if (alt4 != null && celleErTom((alt4))) {
                 celle(alt4).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
