@@ -35,8 +35,6 @@
 
 
     <script>
-        var blankRute = document.getElementById('foobar')
-
         function trykk(tagElement, alt1, alt2, alt3, alt4) {
 
             if (document.getElementById(alt1).innerHTML == '') {
@@ -55,9 +53,6 @@
                 document.getElementById(alt4).innerHTML = tagElement.innerHTML;
                 tagElement.innerHTML = '';
             }
-            blankRute.innerHTML = tagElement.innerHTML;
-            tagElement.innerHTML = '';
-            blankRute = tagElement
 
             if( document.getElementById("r1k1") == "1" 
                 && document.getElementById("r1k2") == "2"
